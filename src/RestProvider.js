@@ -1,4 +1,6 @@
-export class RestProvider {
+import React from "react";
+
+export class RestProvider extends React.Component {
   componentDidMount() {
     const { url } = this.props;
     if (!url) {
@@ -7,6 +9,6 @@ export class RestProvider {
   }
 
   render() {
-    return this.props.children || <></>;
+    return this.props.children;
   }
 }
