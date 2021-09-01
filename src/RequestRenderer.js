@@ -16,10 +16,19 @@ export class RequestRenderer extends React.Component {
   }
 
   async sendRequest(url) {
+    const preHeaders = {};
+
+    if (this.context.auth) {
+      const token = this.context.auth();
+      if (token) {
+        preHeaders["Authorization"] = token;
+      }
+    }
+
     const request = await fetch(url, {
       method: this.props.method || "get",
       body: this.props.body,
-      headers: this.props.headers,
+      headers: { ...preHeaders, ...this.props.headers },
     }).catch((e) => {
       this.setState({
         status: RequestStatus.ERROR,
@@ -41,8 +50,8 @@ export class RequestRenderer extends React.Component {
     }
   }
 
-  componentWillUpdate(_, nextState) {
-    if (this.state === nextState && this.props.static !== true) {
+  componentDidUpdate(_, prevState) {
+    if (this.state === prevState && this.props.static !== true) {
       this.setState({
         status: RequestStatus.LOADING,
       });
