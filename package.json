@@ -1,7 +1,28 @@
 {
   "name": "react-rest-dom",
-  "version": "1.0.0",
+  "description": "Library that allows you to consume Rest APIs through the React DOM.",
+  "version": "0.1.0",
   "main": "./src/index.js",
   "author": "Sammwy <sammwy.dev@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "api",
+    "client",
+    "rest",
+    "react-dom",
+    "reactjs",
+    "rest-api",
+    "restful",
+    "api-client",
+    "api-rest",
+    "restful-api",
+    "rest-client",
+    "react-api",
+    "react-rest"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sammwyy/react-rest-dom"
+  }
 }

@@ -27,7 +27,7 @@ export class RequestRenderer extends React.Component {
 
     const request = await fetch(url, {
       method: this.props.method || "get",
-      body: this.props.body,
+      body: this.props.body ? JSON.stringify(this.props.body) : null,
       headers: { ...preHeaders, ...this.props.headers },
     }).catch((e) => {
       this.setState({
