@@ -2,6 +2,17 @@
 
 This library allows to make requests to Rest APIs and render them easily in the DOM. It also allows rendering components in case there is an error and another while the request is loading.
 
+## ToDo
+
+- [x] Rest context.
+- [x] Rest client.  
+- [x] Authentication.
+- [x] Error handler.
+- [x] Loading handler.
+- [x] Data handler. 
+- [ ] Error with Data handler.
+- [ ] Cache.
+
 ## How to use
 
 ### 1. Context
