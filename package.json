@@ -1,10 +1,30 @@
 {
   "name": "react-rest-dom",
   "description": "Library that allows you to consume Rest APIs through the React DOM.",
-  "version": "0.1.0",
-  "main": "./src/index.js",
+  "version": "0.1.1",
   "author": "Sammwy <sammwy.dev@gmail.com>",
   "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rimraf dist && cross-env NODE_ENV=production babel src --out-dir dist --copy-files"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "cross-env": "^7.0.3",
+    "rimraf": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sammwyy/react-rest-dom"
+  },
   "keywords": [
     "react",
     "api",
@@ -20,9 +40,5 @@
     "rest-client",
     "react-api",
     "react-rest"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sammwyy/react-rest-dom"
-  }
+  ]
 }
